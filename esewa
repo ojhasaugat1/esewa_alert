@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body style="background: transparent; overflow:hidden;">
+  <div id="alert" style="display:none; font-size:40px; color:white;">
+    🎉 New eSewa Donation!
+  </div>
+
+  <script>
+    window.addEventListener("message", (e) => {
+      if (e.data === "esewa_alert") {
+        const a = document.getElementById("alert");
+        a.style.display = "block";
+        setTimeout(() => a.style.display = "none", 6000);
+      }
+    });
+  </script>
+</body>
+</html>
